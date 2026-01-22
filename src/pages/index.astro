@@ -1,11 +1,108 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Cinta Kafe | Kopi Terbaik dengan Sepenuh Hati"
+  description="Nikmati suasana tenang dan kopi pilihan berkualitas tinggi di Cinta Kafe. Tempat berkumpul yang modern, profesional, dan elegan."
+>
+  <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+    <div class="text-2xl font-['Playfair_Display'] font-bold tracking-tight">
+      CINTA KAFE.
+    </div>
+    <div
+      class="hidden md:flex gap-8 font-medium text-sm uppercase tracking-widest"
+    >
+      <a href="#about" class="hover:text-amber-700 transition">Tentang Kami</a>
+      <a href="#menu" class="hover:text-amber-700 transition">Menu</a>
+      <a href="#contact" class="hover:text-amber-700 transition">Kontak</a>
+    </div>
+  </nav>
+
+  <main>
+    <section
+      class="relative h-[80vh] flex items-center justify-center text-center px-4"
+    >
+      <div class="z-10">
+        <h1 class="text-5xl md:text-7xl font-['Playfair_Display'] mb-6">
+          Secangkir Kopi,<br />Sejuta Cerita.
+        </h1>
+        <p class="text-lg text-stone-600 max-w-xl mx-auto mb-8">
+          Menghadirkan biji kopi pilihan dari petani lokal untuk menciptakan
+          momen tak terlupakan di setiap tegukan.
+        </p>
+        <a
+          href="#menu"
+          class="bg-stone-900 text-white px-8 py-4 rounded-full hover:bg-amber-800 transition"
+          >Lihat Menu Kami</a
+        >
+      </div>
+    </section>
+
+    <section id="menu" class="bg-stone-100 py-20 px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-['Playfair_Display'] mb-12 text-center">
+          Menu Spesialis Kami
+        </h2>
+        <div class="grid md:grid-cols-3 gap-12">
+          <div class="group">
+            <div class="h-80 bg-stone-300 mb-4 overflow-hidden rounded-lg">
+              <div
+                class="w-full h-full bg-stone-400 group-hover:scale-105 transition duration-500"
+              >
+              </div>
+            </div>
+            <h3 class="text-xl font-bold">Signature Latte</h3>
+            <p class="text-stone-500">
+              Espresso lembut dengan susu oat organik.
+            </p>
+          </div>
+          <div class="group">
+            <div class="h-80 bg-stone-300 mb-4 overflow-hidden rounded-lg">
+              <div
+                class="w-full h-full bg-stone-400 group-hover:scale-105 transition duration-500"
+              >
+              </div>
+            </div>
+            <h3 class="text-xl font-bold">Manual Brew</h3>
+            <p class="text-stone-500">
+              Biji single-origin pilihan dengan teknik V60.
+            </p>
+          </div>
+          <div class="group">
+            <div class="h-80 bg-stone-300 mb-4 overflow-hidden rounded-lg">
+              <div
+                class="w-full h-full bg-stone-400 group-hover:scale-105 transition duration-500"
+              >
+              </div>
+            </div>
+            <h3 class="text-xl font-bold">Cold Brew Honey</h3>
+            <p class="text-stone-500">
+              Kopi dingin fermentasi 12 jam dengan madu hutan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-stone-900 text-stone-400 py-16 px-8">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-white text-2xl font-['Playfair_Display'] mb-6">
+          Cinta Kafe.
+        </h2>
+        <p class="mb-4">Jl. Melati No. 123, Jakarta Selatan</p>
+        <p>Senin - Minggu | 08:00 - 22:00</p>
+      </div>
+      <div class="flex flex-col md:items-end">
+        <p class="text-white mb-4">Ikuti Perjalanan Kami</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition">Instagram</a>
+          <a href="#" class="hover:text-white transition">TikTok</a>
+          <a href="#" class="hover:text-white transition">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </Layout>
